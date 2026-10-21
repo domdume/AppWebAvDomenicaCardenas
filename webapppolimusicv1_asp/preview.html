@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--
+  preview.html  —  VISTA PREVIA ESTÁTICA del layout estilo Spotify de songs.asp
+  (Solo para previsualizar. La app real es songs.asp en IIS.)
+  Usa las imágenes reales de SongFilesAndImages_resources y el mismo styles.css.
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoliMusic · Tus canciones (preview)</title>
+    <link rel="stylesheet" href="styles.css?v=20261021">
+</head>
+<body class="app-body">
+
+    <!-- ===================== BARRA LATERAL ===================== -->
+    <aside class="sidebar">
+        <a class="brand" href="#">
+            <span class="brand-dot"></span>
+            <span class="brand-name">Poli<span>Music</span></span>
+        </a>
+
+        <nav class="side-nav">
+            <a class="side-item active" href="#"><span class="side-ic">⌂</span> Inicio</a>
+            <a class="side-item" href="#"><span class="side-ic">⌕</span> Buscar</a>
+            <a class="side-item" href="#"><span class="side-ic">▤</span> Tu biblioteca</a>
+        </nav>
+
+        <div class="side-sep"></div>
+
+        <div class="side-label">Playlists</div>
+        <a class="side-item" href="#"><span class="side-plus">+</span> Crear playlist</a>
+        <a class="side-item" href="#"><span class="side-heart">♥</span> Canciones que te gustan</a>
+
+        <div class="side-sep"></div>
+
+        <div class="side-label">Álbumes</div>
+        <span class="side-item side-album">Rock album</span>
+        <span class="side-item side-album">Relax Music</span>
+        <span class="side-item side-album">Retro Album Music</span>
+        <span class="side-item side-album">Classic Album</span>
+        <span class="side-item side-album">Country Album</span>
+    </aside>
+
+    <!-- ===================== COLUMNA PRINCIPAL ===================== -->
+    <div class="main-col">
+
+        <header class="topbar">
+            <div class="topbar-left">
+                <div class="nav-arrows">
+                    <button class="nav-btn" type="button">‹</button>
+                    <button class="nav-btn" type="button">›</button>
+                </div>
+                <nav class="tabs">
+                    <a class="tab active" href="#">Canciones</a>
+                    <a class="tab" href="#">Artistas</a>
+                    <a class="tab" href="#">Álbumes</a>
+                </nav>
+            </div>
+
+            <div class="user-area">
+                <div class="welcome">
+                    <img class="avatar" src="SongFilesAndImages_resources/UserImages/root.png" alt="Foto de perfil">
+                    <div class="welcome-text">
+                        <strong>userAdmin</strong>
+                        <span class="role-badge">ADMIN</span>
+                    </div>
+                </div>
+                <a class="btn-logout" href="#">Salir</a>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="page-head">
+                <div>
+                    <h1 class="page-title">Tus canciones</h1>
+                    <p class="page-sub">5 canciones en tu catálogo</p>
+                </div>
+                <div class="page-actions">
+                    <button class="btn-salmon" id="btnAddSong">+ Nueva canción</button>
+                </div>
+            </div>
+
+            <section class="song-grid">
+
+                <article class="song-card" data-id="1"
+                         data-src="SongFilesAndImages_resources/SongFiles/bensound-adventure.mp3"
+                         data-title="Adventure" data-artist="Juan Gabriel"
+                         data-album="Rock Album" data-cover="SongFilesAndImages_resources/albumImages/album1.png">
+                    <div class="card-art">
+                        <img class="card-cover" src="SongFilesAndImages_resources/albumImages/album1.png" alt="Rock Album">
+                        <button class="card-play" data-play="1">▶</button>
+                        <div class="card-tools">
+                            <button class="tool-btn" data-edit="1">✎</button>
+                            <button class="tool-btn tool-danger" data-del="1">🗑</button>
+                        </div>
+                        <div class="eq"><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    <h3 class="card-title">Adventure</h3>
+                    <p class="card-sub">Juan Gabriel</p>
+                    <div class="card-plays"><span class="plays">2</span> reproducciones</div>
+                </article>
+
+                <article class="song-card" data-id="2"
+                         data-src="SongFilesAndImages_resources/SongFiles/bensound-dreams.mp3"
+                         data-title="Dreams" data-artist="Juan Gabriel"
+                         data-album="Rock Album" data-cover="SongFilesAndImages_resources/albumImages/album1.png">
+                    <div class="card-art">
+                        <img class="card-cover" src="SongFilesAndImages_resources/albumImages/album1.png" alt="Rock Album">
+                        <button class="card-play" data-play="2">▶</button>
+                        <div class="card-tools">
+                            <button class="tool-btn" data-edit="2">✎</button>
+                            <button class="tool-btn tool-danger" data-del="2">🗑</button>
+                        </div>
+                        <div class="eq"><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    <h3 class="card-title">Dreams</h3>
+                    <p class="card-sub">Juan Gabriel</p>
+                    <div class="card-plays"><span class="plays">2</span> reproducciones</div>
+                </article>
+
+                <article class="song-card" data-id="3"
+                         data-src="SongFilesAndImages_resources/SongFiles/bensound-energy.mp3"
+                         data-title="Energy" data-artist="Juan Gabriel"
+                         data-album="Rock Album" data-cover="SongFilesAndImages_resources/albumImages/album1.png">
+                    <div class="card-art">
+                        <img class="card-cover" src="SongFilesAndImages_resources/albumImages/album1.png" alt="Rock Album">
+                        <button class="card-play" data-play="3">▶</button>
+                        <div class="card-tools">
+                            <button class="tool-btn" data-edit="3">✎</button>
+                            <button class="tool-btn tool-danger" data-del="3">🗑</button>
+                        </div>
+                        <div class="eq"><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    <h3 class="card-title">Energy</h3>
+                    <p class="card-sub">Juan Gabriel</p>
+                    <div class="card-plays"><span class="plays">3</span> reproducciones</div>
+                </article>
+
+                <article class="song-card" data-id="4"
+                         data-src="SongFilesAndImages_resources/SongFiles/bensound-sci-fi.mp3"
+                         data-title="Scifi" data-artist="Juan Gabriel"
+                         data-album="Rock Album" data-cover="SongFilesAndImages_resources/albumImages/album1.png">
+                    <div class="card-art">
+                        <img class="card-cover" src="SongFilesAndImages_resources/albumImages/album1.png" alt="Rock Album">
+                        <button class="card-play" data-play="4">▶</button>
+                        <div class="card-tools">
+                            <button class="tool-btn" data-edit="4">✎</button>
+                            <button class="tool-btn tool-danger" data-del="4">🗑</button>
+                        </div>
+                        <div class="eq"><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    <h3 class="card-title">Scifi</h3>
+                    <p class="card-sub">Juan Gabriel</p>
+                    <div class="card-plays"><span class="plays">3</span> reproducciones</div>
+                </article>
+
+                <article class="song-card" data-id="5"
+                         data-src="SongFilesAndImages_resources/SongFiles/bensound-tomorrow.mp3"
+                         data-title="Tomorrow" data-artist="Juan Gabriel"
+                         data-album="Rock Album" data-cover="SongFilesAndImages_resources/albumImages/album1.png">
+                    <div class="card-art">
+                        <img class="card-cover" src="SongFilesAndImages_resources/albumImages/album1.png" alt="Rock Album">
+                        <button class="card-play" data-play="5">▶</button>
+                        <div class="card-tools">
+                            <button class="tool-btn" data-edit="5">✎</button>
+                            <button class="tool-btn tool-danger" data-del="5">🗑</button>
+                        </div>
+                        <div class="eq"><span></span><span></span><span></span><span></span></div>
+                    </div>
+                    <h3 class="card-title">Tomorrow</h3>
+                    <p class="card-sub">Juan Gabriel</p>
+                    <div class="card-plays"><span class="plays">5</span> reproducciones</div>
+                </article>
+
+            </section>
+        </main>
+    </div>
+
+    <!-- ===================== REPRODUCTOR ===================== -->
+    <footer class="player-bar">
+        <div class="player-left">
+            <img class="np-cover" id="npCover" src="" alt="" style="visibility:hidden">
+            <div class="np-meta">
+                <span class="np-title" id="npTitle">Selecciona una canción</span>
+                <span class="np-artist" id="npArtist"></span>
+            </div>
+        </div>
+
+        <div class="player-center">
+            <button class="pc-btn" id="btnPlayPause">▶</button>
+            <div class="pc-seek">
+                <span class="pc-time" id="pcCurrent">0:00</span>
+                <input type="range" id="seekBar" class="seek" min="0" max="100" value="0" step="0.1">
+                <span class="pc-time" id="pcDuration">0:00</span>
+            </div>
+        </div>
+
+        <div class="player-right">
+            <input type="range" id="volBar" class="vol" min="0" max="1" value="0.8" step="0.05">
+        </div>
+
+        <audio id="audioEl" preload="none"></audio>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

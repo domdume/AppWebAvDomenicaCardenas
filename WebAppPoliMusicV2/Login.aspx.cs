@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -17,7 +17,7 @@ namespace WebAppPoliMusicV2
             if (!Page.IsPostBack)
             {
 #if DEBUG
-                txtLogin.Text = "Domenica.Cardenas";
+                txtLogin.Text = "domenica.cardenas";
                 txtPassword.Text = "12345678";
                 txtPassword.Attributes.Add("value", txtPassword.Text);
                 txtPassword.TextMode = TextBoxMode.Password;
@@ -58,7 +58,7 @@ namespace WebAppPoliMusicV2
                 {
                     Session[Util.Constants.USER] = user;
                     FormsAuthentication.RedirectFromLoginPage(login, true);
-                    Response.Redirect("~/DesktopAdmin.aspx?uid=" + user.ID, true);
+                    // All authenticated users enter the music library through Default.aspx.
                 }
                 else
                 {

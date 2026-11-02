@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 using System.Web;
@@ -12,7 +12,11 @@ namespace WebAppPoliMusicV2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session.Clear();
+            Session.Abandon();
             FormsAuthentication.SignOut();
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.Cache.SetNoStore();
             Response.Redirect("Login.aspx");
         }
     }

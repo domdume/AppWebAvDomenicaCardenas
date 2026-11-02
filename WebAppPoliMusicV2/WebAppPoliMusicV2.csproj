@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -57,7 +57,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Default.aspx" />
+    <Content Include="Song.aspx" /><Content Include="Content\song.css" /><Content Include="Scripts\song.js" /><Content Include="Default.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="PlaylistImages\default.jpg" />
@@ -73,7 +73,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\User.cs" />
+    <Compile Include="Entities\Song.cs" /><Compile Include="BLL\Song.cs" /><Compile Include="Song.aspx.cs"><DependentUpon>Song.aspx</DependentUpon><SubType>ASPXCodeBehind</SubType></Compile><Compile Include="Song.aspx.designer.cs"><DependentUpon>Song.aspx</DependentUpon></Compile><Compile Include="BLL\User.cs" />
     <Compile Include="DAL\Song.cs" />
     <Compile Include="DAL\User.cs" />
     <Compile Include="Default.aspx.cs">

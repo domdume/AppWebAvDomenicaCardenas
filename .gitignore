@@ -1,8 +1,51 @@
 ﻿################################################################################
 # Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
 ################################################################################
+Web.secrets.config
 
-/.vs
-bin
-Debug
-csproj.user
+# --- Compilacion de Visual Studio / MSBuild ---
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.dll
+*.pdb
+*.exe
+*.cache
+
+# --- Archivos temporales del compilador dinamico de ASP.NET ---
+# (se regeneran solos en el primer acceso al sitio)
+[Tt]emp/
+*.compiled
+App_Data/*.ldf
+App_Data/*.mdf
+
+# --- Entorno de IIS Express generado localmente ---
+.vs/
+*.user
+.user
+*.suo
+*.userprefs
+
+# --- Resultados de pruebas ---
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+
+# --- Sistema operativo ---
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# --- Editores ---
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- Logs ---
+*.log
+/.workbuddy-ai
+*/packages
